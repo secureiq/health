@@ -16,7 +16,7 @@ import {
 } from "reactstrap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Background from "../thailand.jpg"
+import Background from "./thailand.jpg"
 const InsurancePage = ({ data }) => {
   console.log(data)
   const pageData = data.contentfulPages
