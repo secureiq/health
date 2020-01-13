@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap"
+import Logo from "./logo.png"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -27,12 +28,12 @@ const Header = ({ siteTitle, data }) => {
         style={{
           paddingTop: 20,
           paddingBottom: 20,
-          backgroundColor: "#344759 !important",
+          backgroundColor: "#333 !important",
         }}
       >
         <Container>
           <Link to="/">
-            <span className="navbar-brand">{siteTitle}</span>
+            <img width={100} src={Logo} />
           </Link>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

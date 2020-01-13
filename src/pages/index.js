@@ -1,7 +1,11 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSuitcaseRolling, faListAlt } from "@fortawesome/free-solid-svg-icons"
+import {
+  faSuitcaseRolling,
+  faCaretSquareRight,
+  faScroll,
+} from "@fortawesome/free-solid-svg-icons"
 import {
   Jumbotron,
   Container,
@@ -16,7 +20,6 @@ import {
 import Layout from "../components/layout"
 import Background from "./bkk2.jpg"
 import SEO from "../components/seo"
-
 const IndexPage = ({ data }) => {
   const productCard = data.allContentfulPages.edges
   return (
@@ -26,7 +29,8 @@ const IndexPage = ({ data }) => {
         <Container
           fluid
           style={{
-            backgroundColor: "rgba(224, 224, 224, 0.4)",
+            backgroundColor: "rgba(249, 243, 180, 0.5)",
+            backgroundPosition: "fixed",
             paddingTop: 300,
             paddingBottom: 15,
           }}
@@ -49,9 +53,9 @@ const IndexPage = ({ data }) => {
           <Col md={2} id="peace" style={{ textAlign: "right" }}>
             <h5
               style={{
-                backgroundColor: "rgb(112, 217, 217)",
+                backgroundColor: "#F9FDB4",
                 padding: 7,
-                color: "#fff",
+                color: "#424242",
                 borderRadius: 5,
               }}
             >
@@ -63,17 +67,16 @@ const IndexPage = ({ data }) => {
               <Col md={3} sm={4} xs={4}>
                 <Card>
                   <CardBody style={{ textAlign: "center" }}>
-                    <CardTitle>
-                      <b>{i.node.title}</b>
+                    <CardTitle style={{ fontSize: 18 }}>
+                      {i.node.title}
                     </CardTitle>
                     <h1 style={{ margin: 20 }}>
-                      <FontAwesomeIcon icon={faSuitcaseRolling} />
+                      <FontAwesomeIcon icon={faScroll} />
                     </h1>
 
                     <Link to={i.node.slug}>
-                      <Button color="secondary" outline>
-                        <FontAwesomeIcon icon={faListAlt} />
-                        {"   "}View Information
+                      <Button color="secondary">
+                        <b>Buy Now</b>
                       </Button>
                     </Link>
                   </CardBody>
@@ -84,7 +87,14 @@ const IndexPage = ({ data }) => {
         </Row>
         <Row style={{ marginTop: 40, marginBottom: 40 }}>
           <Col md={12} style={{ textAlign: "center" }}>
-            <h2>Worry Free Insurance Plans</h2>
+            <h2
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "#F9FDB4",
+              }}
+            >
+              Worry Free Insurance Plans
+            </h2>
             <span className="p">Expats, Long Stay, Tourists</span>
           </Col>
         </Row>
@@ -140,7 +150,13 @@ const IndexPage = ({ data }) => {
         </Row>
         <Row style={{ marginTop: 40, marginBottom: 40 }}>
           <Col md={12}>
-            <h2 style={{ textAlign: "center" }}>
+            <h2
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "#F9FDB4",
+                textAlign: "center",
+              }}
+            >
               What our Customers say about us
             </h2>
           </Col>

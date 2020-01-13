@@ -28,7 +28,7 @@ const InsurancePage = ({ data }) => {
         <Container
           fluid
           style={{
-            backgroundColor: "rgba(45, 92, 107, 0.9)",
+            backgroundColor: "rgb(249, 253, 180, 0.4)",
             paddingTop: 75,
             paddingBottom: 75,
           }}
