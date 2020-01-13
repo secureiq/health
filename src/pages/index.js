@@ -14,7 +14,7 @@ import {
   Button,
 } from "reactstrap"
 import Layout from "../components/layout"
-import Background from "../../public/static/bkk2.jpg"
+import Background from "./bkk2.jpg"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => {
