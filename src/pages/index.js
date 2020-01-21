@@ -49,6 +49,31 @@ const IndexPage = ({ data }) => {
         </Container>
       </Jumbotron>
       <Container>
+        <Row style={{ marginTop: 40, marginBottom: 40 }}>
+          <Col md={12} style={{ textAlign: "center" }}>
+            <h2
+              style={{
+                textDecoration: "underline",
+                textDecorationColor: "#F9FDB4",
+              }}
+            >
+              Why Do You Need Health Insurance?
+            </h2>
+            <span className="p">This expat found out the hard way</span>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: 40, marginBottom: 40 }}>
+          <Col md={12} style={{ textAlign: "center" }}>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/DOUpGnty5oc"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </Col>
+        </Row>
         <Row style={{ marginTop: 20 }}>
           <Col md={2} id="peace" style={{ textAlign: "right" }}>
             <h5
@@ -68,7 +93,7 @@ const IndexPage = ({ data }) => {
                 <Card>
                   <CardBody style={{ textAlign: "center" }}>
                     <CardTitle style={{ fontSize: 18 }}>
-                      {i.node.title}
+                      {i.node.target}
                     </CardTitle>
                     <h1 style={{ margin: 20 }}>
                       <FontAwesomeIcon icon={faScroll} />
@@ -76,7 +101,7 @@ const IndexPage = ({ data }) => {
 
                     <Link to={i.node.slug}>
                       <Button color="secondary">
-                        <b>Buy Now</b>
+                        <b>View Plans</b>
                       </Button>
                     </Link>
                   </CardBody>
@@ -220,6 +245,7 @@ export const query = graphql`
         node {
           slug
           title
+          target
         }
       }
     }
